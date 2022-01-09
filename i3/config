@@ -37,15 +37,21 @@ bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @D
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+
 #bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+#bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 0 toggle
+#bindsym NoSymbol exec --no-startup-id pactl set-source-mute 0 toggle
 
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 0 toggle
+# bindsym XF86TouchpadToggle exec xinput set-prop "ELAN1205:00 04F3:30E9 Touchpad" "Device Enabled" 1 toggle
+# bindsym XF86TouchpadToggle exec if [[ "       1" == `xinput list-props "ELAN1205:00 04F3:30E9 Touchpad" | grep "Device Enabled" | cut -d":" -f 2` ]];then xinput set-prop "ELAN1205:00 04F3:30E9 Touchpad" "Device Enabled" 0; else xinput set-prop "ELAN1205:00 04F3:30E9 Touchpad" "Device Enabled" 1; fi
+# bindsym XF86TouchpadToggle exec [ "$(xinput list-props 'ELAN1205:00 04F3:30E9 Touchpad' | grep 'Device Enabled' | grep -o '[01]$')" == "1" ] && xinput --disable 'ELAN1205:00 04F3:30E9 Touchpad' || xinput --enable 'ELAN1205:00 04F3:30E9 Touchpad'
+ bindsym XF86TouchpadToggle exec TPName=`xinput | grep Touchpad | cut -d" " -f 5-7` && [ "$(xinput list-props "$TPName" | grep 'Device Enabled' | grep -o '[01]$')" == "1" ] && xinput --disable "$TPName" && unset TPName || xinput --enable "$TPName" && unset TPName
 
-bindsym NoSymbol exec --no-startup-id pactl set-source-mute 0 toggle
-## bindsym XF86TouchpadToggle exec 
 
 bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 bindsym XF86MonBrightnessUp exec light -A 10 # decrease screen brightness
+bindsym Shift+XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
+bindsym Shift+XF86MonBrightnessUp exec light -A 1 # decrease screen brightness
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -124,7 +130,7 @@ set $ws5 "5:       "
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9: Steam"
+set $ws9 "9"
 set $ws10 "10:DISCORD"
 set $ws11 "11"
 set $ws12 "12"
@@ -378,28 +384,29 @@ bindsym $mod+c exec brave-browser-nightly
 
 
 # set margin for apps
-gaps inner 10
+gaps inner 8
 #gaps outer 10
 
 # remove apps panel bar
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
 #for_window [class="discord"] fullscreen enable
-for_window [class="Code"] fullscreen enable
+# for_window [class="Code"] fullscreen enable
 for_window [class="Alacritty"] floating enable
 ##for_window [class="^.*"] resize set width 203 px
 
 for_window [class="Brave-browser-nightly"] move to workspace $ws2
 for_window [class="konsole"] move to workspace $ws1
-for_window [class="Spotify"] move to workspace $ws8
-for_window [class="Telegram"] move to workspace $ws9
+for_window [class="Spotify"] move to workspace $ws5
+for_window [class="Telegram"] move to workspace $ws5
 for_window [class="discord"] move to workspace $ws10
 
 # set ctrl alt t for opening terminal
 bindsym Control+Mod1+t exec konsole
 
 # auto enable picom to transparent the windows
-exec --no-startup-id picom -CGb
+# exec --no-startup-id picom -CGb
+
 exec --no-startup-id ulauncher --no-window-shadow --no-extensions --hide-window
 
 # exec --no-startup-id oneko -tora -speed 25 -fg black -bg orange
