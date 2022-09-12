@@ -53,6 +53,9 @@ bindsym XF86MonBrightnessUp exec light -A 10 # decrease screen brightness
 bindsym Shift+XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 bindsym Shift+XF86MonBrightnessUp exec light -A 1 # decrease screen brightness
 
+# meta+n to set mic and audio volumes to desired values
+bindsym $mod+n exec pacmd set-source-volume 1 10000 && pactl set-sink-volume @DEFAULT_SINK@ 65500
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
