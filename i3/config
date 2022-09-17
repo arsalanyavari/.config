@@ -276,16 +276,16 @@ bindsym $mod+r mode "resize"
 #}
 
 bar {
-	status_command /home/arya/.local/bin/bumblebee-status \
-		-m  cpu memory  battery_upower date time dunstctl layout \
-		pasink pasource \
-		-p time.format="%H:%M:%S" \
-		-t iceberg-rainbow
-	font pango:Menlo for powerline 11
-	position top
-	height 20
-	
-	colors {
+    status_command /home/arya/.local/bin/bumblebee-status \
+    -m  cpu memory  battery_upower date time dunstctl layout \
+    pasink pasource \
+    -p time.format="%H:%M:%S" \
+    -t iceberg-rainbow
+    font pango:Mononoki Nerd Font 13
+    position top
+    height 23
+
+    colors {
                 background #1F2D3A
                 statusline #07c198
                 separator #07c198
