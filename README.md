@@ -12,7 +12,7 @@ Redhat based:
 
 2. Run this command:
 ```bash
-mkdir ~/.fonts && cd ~/.fonts && wget https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki-Regular%20Nerd%20Font%20Complete.ttf && fc-cache -vf ~/.fonts \
+mkdir ~/.fonts || true && cd ~/.fonts && wget https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki-Regular%20Nerd%20Font%20Complete.ttf && fc-cache -vf ~/.fonts \
 && echo -e "if [ -f `which powerline-daemon` ]; then\n\tpowerline-daemon -q\n\tPOWERLINE_BASH_CONTINUATION=1\n\tPOWERLINE_BASH_SELECT=1\n\t. $(find -L /usr/share/powerline -name "powerline.sh" | grep bash)\nfi" >> ~/.bashrc && source ~/.bashrc
 ```
 ***
