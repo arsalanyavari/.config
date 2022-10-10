@@ -16,3 +16,10 @@ mkdir ~/.fonts || true && cd ~/.fonts && wget https://github.com/arsalanyavari/.
 && echo -e "if [ -f `which powerline-daemon` ]; then\n\tpowerline-daemon -q\n\tPOWERLINE_BASH_CONTINUATION=1\n\tPOWERLINE_BASH_SELECT=1\n\t. $(find -L /usr/share/powerline -name "powerline.sh" | grep bash)\nfi" >> ~/.bashrc && source ~/.bashrc
 ```
 ***
+
+# follow these commands if you use Tmux
+
+```bash
+git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack \
+&& tmux source ~/.tmux.conf &> /dev/null; wget https://github.com/arsalanyavari/.config/blob/main/.tmux.conf && mv .tmux.conf ~/.tmux.conf
+```
