@@ -33,3 +33,25 @@ git clone https://github.com/arsalanyavari/vimrc.git /tmp/.vim \
 && vim '+PluginInstall'
 ```
 then press `:qa!`
+
+# install mononoki font
+```bash
+cd /tmp && mkdir mononoki && cd mononoki && wget \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki%20Bold%20Italic%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki%20Bold%20Italic%20Nerd%20Font%20Complete%20Mono.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki%20Bold%20Italic%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki%20Bold%20Italic%20Nerd%20Font%20Complete.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki%20Bold%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki%20Bold%20Nerd%20Font%20Complete%20Mono.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki%20Bold%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki%20Bold%20Nerd%20Font%20Complete.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki%20Italic%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki%20Italic%20Nerd%20Font%20Complete%20Mono.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki%20Italic%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki%20Italic%20Nerd%20Font%20Complete.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki-Regular%20Nerd%20Font%20Complete%20Mono%20Windows%20Compatible.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki-Regular%20Nerd%20Font%20Complete%20Mono.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki-Regular%20Nerd%20Font%20Complete%20Windows%20Compatible.ttf \
+https://github.com/arsalanyavari/.config/blob/main/Mononoki/mononoki-Regular%20Nerd%20Font%20Complete.ttf &&\
+mv /tmp/mononoki ~/.fonts && fc-cache -vf ~/.fonts
+```
