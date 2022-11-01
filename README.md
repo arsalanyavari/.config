@@ -23,6 +23,7 @@ mkdir ~/.fonts || true && cd ~/.fonts && wget https://github.com/arsalanyavari/.
 git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack \
 && tmux source ~/.tmux.conf &> /dev/null; wget https://github.com/arsalanyavari/.config/blob/main/.tmux.conf && mv .tmux.conf ~/.tmux.conf
 ```
+***
 
 # follow these commands if you use vim
 
@@ -33,6 +34,7 @@ git clone https://github.com/arsalanyavari/vimrc.git /tmp/.vim \
 && vim '+PluginInstall'
 ```
 then press `:qa!`
+***
 
 # install mononoki font
 ```bash
