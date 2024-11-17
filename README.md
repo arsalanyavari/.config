@@ -21,7 +21,7 @@ mkdir ~/.fonts || true && cd ~/.fonts && wget https://github.com/arsalanyavari/.
 
 ```bash
 git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack \
-&& tmux source ~/.tmux.conf &> /dev/null; wget https://github.com/arsalanyavari/.config/blob/main/.tmux.conf && mv .tmux.conf ~/.tmux.conf
+&& tmux source ~/.tmux.conf &> /dev/null; wget -O $HOME/.tmux.conf https://raw.githubusercontent.com/arsalanyavari/.config/refs/heads/main/.tmux.conf
 ```
 ***
 
