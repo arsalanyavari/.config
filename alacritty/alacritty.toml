@@ -1,0 +1,64 @@
+[font]
+  size = 19
+
+  [font.normal]
+    family = "Mononoki Nerd Font"
+    style = "Regular"
+
+  [font.bold]
+    family = "Mononoki Nerd Font"
+    style = "Bold"
+
+  [font.italic]
+    family = "Mononoki Nerd Font"
+    style = "Italic"
+
+  [font.bold_italic]
+    family = "Mononoki Nerd Font"
+    style = "Bold Italic"
+
+  [font.offset]
+    x = 0
+    y = 2
+
+  [font.glyph_offset]
+    x = 0
+    y = 1
+
+[window]
+  opacity = 0.90
+  decorations = "full"
+
+  [window.padding]
+    x = 10
+    y = 10
+
+  [window.dimensions]
+    columns = 110
+    lines = 35
+
+[colors]
+  [colors.primary]
+    background = "0x0f0f0f"
+    foreground = "0xc5c8c6"
+
+  [colors.cursor]
+    text = "0x0f0f0f"
+    cursor = "0xffffff"
+
+[bell]
+  animation = "EaseOutExpo"
+  color = "0xaa0000"
+  duration = 50
+
+[mouse]
+  hide_when_typing = true
+
+[selection]
+  save_to_clipboard = true
+  semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[cursor]
+  style = "Block"
+  unfocused_hollow = true
+
