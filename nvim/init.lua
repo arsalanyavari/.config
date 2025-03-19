@@ -70,7 +70,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>f', '<Cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
-local servers = { 'pyright', 'tsserver', 'rust_analyzer', 'gopls' }
+local servers = { 'pyright', 'ts_ls', 'rust_analyzer', 'gopls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
