@@ -1,0 +1,151 @@
+// Based on #1576
+{
+    "display": {
+        "color": {
+            "keys": "blue"
+        },
+        "separator": "",
+        "constants": [
+            "──────────────────────────────────────────────",
+            "\u001b[47D",
+            "\u001b[47C",
+            "\u001b[46C"
+        ],
+        "brightColor": false
+    },
+    "modules": [
+        {
+            "type": "version",
+            "key": "┌─────────────────{$1}┐\u001b[41D",
+            "format": "\u001b[1m{#keys}"
+        },
+        {
+            "type": "os",
+            "key": "│  {icon}  \u001b[s{sysname}\u001b[u\u001b[10C {$3}│{$2}"
+        },
+        {
+            "type": "uptime",
+            "key": "│  {icon}  Uptime     {$4} │{$2}"
+        },
+        {
+            "type": "locale",
+            "key": "│  {icon}  Locale     {$3}│{$2}"
+        },
+
+        // Hardware
+        {
+            "type": "custom",
+            "key": "│{#cyan}┌───────────────{$1}┐{#keys}│\u001b[37D",
+            "format": "{#bright_cyan} Hardware "
+        },
+        {
+            "type": "chassis",
+            "key": "│{#cyan}│ {icon}  Chassis    {$4}│{#keys}│{$2}"
+        },
+        {
+            "type": "memory",
+            "key": "│{#cyan}│ {icon}  RAM        {$4}│{#keys}│{$2}"
+        },
+        {
+            "type": "swap",
+            "key": "│{#cyan}│ {icon}  SWAP       {$4}│{#keys}│{$2}"
+        },
+        {
+            "type": "cpu",
+            "key": "│{#cyan}│ {icon}  CPU        {$4}│{#keys}│{$2}",
+            "showPeCoreCount": true
+        },
+        {
+            "type": "gpu",
+            "key": "│{#cyan}│ {icon}  GPU        {$4}│{#keys}│{$2}"
+        },
+        {
+            "type": "disk",
+            "key": "│{#cyan}│ {icon}  Disk       {$4}│{#keys}│{$2}",
+            "format": "{size-used} \/ {size-total} ({size-percentage}) - {filesystem}",
+        },
+        {
+            "type": "battery",
+            "key": "│{#cyan}│ {icon}  Battery    {$4}│{#keys}│{$2}"
+        },
+        {
+            "type": "custom",
+            "key": "│{#cyan}└───────────────{$1}┘{#keys}│",
+            "format": ""
+        },
+
+        // Desktop
+        {
+            "type": "custom",
+            "key": "│{#green}┌───────────────{$1}┐{#keys}│\u001b[37D",
+            "format": "{#bright_green} Desktop "
+        },
+        {
+            "type": "de",
+            "key": "│{#green}│ {icon}  Desktop    {$4}│{#keys}│{$2}"
+        },
+        {
+            "type": "wm",
+            "key": "│{#green}│ {icon}  Session    {$4}│{#keys}│{$2}"
+        },
+        {
+            "type": "display",
+            "key": "│{#green}│ {icon}  Display    {$4}│{#keys}│{$2}",
+            "compactType": "original-with-refresh-rate"
+        },
+        {
+            "type": "gpu",
+            "key": "│{#green}│ {icon}  G-Driver   {$4}│{#keys}│{$2}",
+            "format": "{driver}"
+        },
+        {
+            "type": "custom",
+            "key": "│{#green}└───────────────{$1}┘{#keys}│",
+            "format": ""
+        },
+
+        // Terminal
+        {
+            "type": "custom",
+            "key": "│{#red}┌───────────────{$1}┐{#keys}│\u001b[37D",
+            "format": "{#red} Terminal "
+        },
+        {
+            "type": "shell",
+            "key": "│{#red}│ {icon}  Shell      {$4}│{#keys}│{$2}"
+        },
+        {
+            "type": "terminal",
+            "key": "│{#red}│ {icon}  Terminal   {$4}│{#keys}│{$2}"
+        },
+        {
+            "type": "terminalfont",
+            "key": "│{#red}│ {icon}  Term Font  {$4}│{#keys}│{$2}"
+        },
+        {
+            "type": "terminaltheme",
+            "key": "│{#red}│ {icon}  Colors     {$4}│{#keys}│{$2}"
+        },
+        {
+            "type": "packages",
+            "key": "│{#red}│ {icon}  Packages   {$4}│{#keys}│{$2}"
+        },
+        {
+            "type": "custom",
+            "key": "│{#red}└───────────────{$1}┘{#keys}│",
+            "format": ""
+        },
+
+        
+
+        {
+            "type": "custom",
+            "key": "└─────────────────{$1}┘",
+            "format": ""
+        },
+
+        // End
+        "break",
+        "colors"
+    ]
+}
